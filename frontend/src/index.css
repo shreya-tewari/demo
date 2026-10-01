@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #f9fafb;
+    color: #111827;
+    min-height: 100vh;
+  }
+}
+
+/* ── Reusable component classes ─────────────────────────────────────────────── */
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 150ms, transform 150ms;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1f2937;
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: background-color 150ms, transform 150ms;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.input-area {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  color: #1f2937;
+  resize: none;
+  transition: border-color 150ms, box-shadow 150ms;
+  outline: none;
+  line-height: 1.6;
+}
+
+.input-area::placeholder {
+  color: #9ca3af;
+}
+
+.input-area:focus {
+  border-color: #6b7280;
+  box-shadow: 0 0 0 3px rgb(17 24 39 / 0.06);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-green {
+  background-color: #f0fdf4;
+  color: #15803d;
+}
+
+.badge-red {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.badge-gray {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}

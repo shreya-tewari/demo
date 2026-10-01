@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Env files (keep .env.example, ignore actual secrets)
+.env
+!.env.example
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Cloned repo copy (we keep backend/ not backend_repo/)
+backend_repo/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
